@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <title>Todo Angular 2 - WebWorker</title>
+  <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+  <script src="../node_modules/systemjs/dist/system.src.js"></script>
+  <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script>
+    System.config({
+      packages: {"app": {defaultExtension: "js"}}
+    });
+    System.import("app/app");
+  </script>
+<body>
+  <todo-app>
+    Loading...
+  </todo-app>
+</body>
+</html>
