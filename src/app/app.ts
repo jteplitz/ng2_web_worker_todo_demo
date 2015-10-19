@@ -1,4 +1,3 @@
-import {bootstrap} from "angular2/bootstrap";
-import {TodoComponent} from "./todo_component";
+import {bootstrap} from "angular2/web_worker/ui";
 
-bootstrap(TodoComponent);
+bootstrap("loader.js");

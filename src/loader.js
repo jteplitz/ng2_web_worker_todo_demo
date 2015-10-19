@@ -1,18 +1,8 @@
-$SCRIPTS$
+importScripts("../node_modules/systemjs/dist/system.src.js",
+              "../node_modules/angular2/bundles/web_worker/worker.dev.js");
 
 System.config({
-  baseURL: '/',
-  defaultJSExtensions: true
+  packages: {"app": {defaultExtension: "js"}}
 });
 
-System.import("examples/src/web_workers/todo/background_index")
-    .then(
-        function(m) {
-          console.log("running main");
-          try {
-            m.main();
-          } catch (e) {
-            console.error(e);
-          }
-        },
-        function(error) { console.error("error loading background", error); });
+System.import("app/background");
